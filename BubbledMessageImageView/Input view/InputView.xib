@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg9-ja-zn7">
+                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg9-ja-zn7">
                     <rect key="frame" x="305" y="0.0" width="70" height="44"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="v29-sW-1gi"/>
@@ -25,11 +25,11 @@
                         <action selector="sendMessageButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="fNT-nf-b0I"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vj9-c3-Oru" customClass="AutoHeightTextView" customModule="BubbledMessageImageView" customModuleProvider="target">
-                    <rect key="frame" x="8" y="4" width="289" height="36"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vj9-c3-Oru" customClass="AutoHeightTextView" customModule="BubbledMessageImageView" customModuleProvider="target">
+                    <rect key="frame" x="8" y="5" width="289" height="34"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="36" id="Q1Z-a7-RTy"/>
+                        <constraint firstAttribute="height" constant="34" id="QaV-nZ-HO6"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -37,20 +37,22 @@
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Vj9-c3-Oru" secondAttribute="bottom" constant="4" id="32E-DZ-gum"/>
                 <constraint firstAttribute="trailing" secondItem="dg9-ja-zn7" secondAttribute="trailing" id="60A-eg-ot3"/>
-                <constraint firstAttribute="bottom" secondItem="dg9-ja-zn7" secondAttribute="bottom" id="BDo-YP-fyP"/>
+                <constraint firstItem="dg9-ja-zn7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6H7-ie-GP2"/>
+                <constraint firstItem="Vj9-c3-Oru" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="QZg-do-MZ1"/>
+                <constraint firstItem="dg9-ja-zn7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eyX-aH-ORl"/>
                 <constraint firstItem="Vj9-c3-Oru" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="i2B-iS-QNt"/>
-                <constraint firstItem="dg9-ja-zn7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="n7S-Xx-hZo"/>
-                <constraint firstItem="Vj9-c3-Oru" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="tl2-77-gsb"/>
+                <constraint firstAttribute="bottom" secondItem="dg9-ja-zn7" secondAttribute="bottom" id="zN9-Cy-C0v"/>
                 <constraint firstItem="dg9-ja-zn7" firstAttribute="leading" secondItem="Vj9-c3-Oru" secondAttribute="trailing" constant="8" id="zf6-19-riH"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="messageTextView" destination="Vj9-c3-Oru" id="ZlB-P9-xyM"/>
+                <outlet property="messageViewHeightConstraint" destination="QaV-nZ-HO6" id="SfT-OE-s9g"/>
                 <outlet property="sendMessageButton" destination="dg9-ja-zn7" id="XO1-Yh-Rgd"/>
             </connections>
+            <point key="canvasLocation" x="33.5" y="64"/>
         </view>
     </objects>
 </document>

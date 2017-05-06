@@ -11,8 +11,6 @@ import UIKit
 
 class AutoHeightTextView: UITextView
 {
-    var heightConstraint:NSLayoutConstraint?
-    
     override func awakeFromNib()
     {
         super.awakeFromNib()
