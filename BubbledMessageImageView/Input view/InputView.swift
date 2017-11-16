@@ -48,7 +48,7 @@ class InputView: UIView, UITextViewDelegate
     func sendMessage()
     {
         let string = self.messageTextView.text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        if string.characters.count > 0
+        if string.count > 0
         {
             guard let _ = self.delegate?.sendMessageButtonDidTap(message:) else {return}
             self.delegate?.sendMessageButtonDidTap(message: string)

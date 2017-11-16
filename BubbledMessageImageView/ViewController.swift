@@ -91,7 +91,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                                                object: nil)
     }
     
-    func keyboardWillChangeFrame(notification:Notification)
+    @objc func keyboardWillChangeFrame(notification:Notification)
     {
         guard let frame  = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? CGRect else {return}
         guard let animationDuration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? CGFloat else {return}
